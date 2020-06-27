@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CALCULATOR</title>
+</head>
+<script type="text/javascript">
+	
+function result() {
+	var num = document.getElementById("screen");
+num.value=eval(num.value);
+}
+
+
+function cancel() {
+	var num = document.getElementById("cancel");
+	num.value=" ";
+}
+
+</script>
+<style type="text/css">
+
+body{
+	
+background: linear-gradient(#009FFF,#ec2F4B);
+}
+	*{
+		font-size: 35px;
+	}
+	#main{
+margin-top: 80px;
+height: 530px;
+width: 360px;
+border: 5px inset #061161;
+border-radius: 20px;
+background: linear-gradient(black,#061161);
+	}
+	#screen{
+	background: #60799f;
+	border-bottom-color: #A569BD;
+	border-top-style: none;
+	border-left-style: none;
+	border-right-style: none;
+	margin-top: 10px;
+	color: white;
+	width: 330px;
+	border-radius: 15px;
+	height: 80px;
+	font-size: 25px;
+	}
+	#main button{
+		position: relative;
+display: left;
+color: white;
+background-color: purple;
+	}
+	#screen,select{
+outline: none;
+	}
+.call{
+	position: relative;
+display: grid;
+}
+.call .value{
+grid-column: span 4;
+margin-bottom: 20px;
+
+color: white;
+text-align: right;
+font-size: 18px;
+padding: 10px;
+border:none;
+
+outline: none;
+}
+.call .num{
+
+margin: 4px;
+} 
+.call span{
+display: grid;
+		cursor: pointer;
+	display: grid;
+	color: white;
+	width: 80px;
+	height: 70px;
+	place-items:center;
+	background-color: #0B486B;
+	border:1px solid rgba(0,0,0,0.2);
+	border-radius: 15px;
+
+}
+
+.call span:active{
+border:1px inset black;
+
+background-color: #061161;
+}
+.call span #cancel{
+	grid-column: span 2;
+}
+
+#main #n #cancel{
+	width: 170px;
+	background-color:#f80759;
+	border:none;
+	border-radius: 15px;
+	grid-column: span 2;
+
+
+}
+#main #n .plus{
+	grid-row: span 2;
+	height: 150px;
+}
+#main #n .equal{
+	grid-column: span 2;
+	width: 170px;
+background-color: #03b1efff;
+}
+
+</style>
+<body>
+<center>
+<div id="main" class="container">
+	<form name="cal" class="call" id="n">
+	<input type="text" name="txt" id="screen" class="value" >
+<button id="cancel" onclick="cancel()">CE</button>
+
+
+	<span class="num" onclick="document.cal.txt.value +='/'">/</span>
+
+	<span class="num" onclick="document.cal.txt.value +='*'">x</span>
+	<span class="num" onclick="document.cal.txt.value +='7'">7</span>
+
+	<span class="num" onclick="document.cal.txt.value +='8'">8</span>
+	<span class="num" onclick="document.cal.txt.value +='9'">9</span>
+
+	<span class="num" onclick="document.cal.txt.value +='-'">-</span>
+	<span class="num" onclick="document.cal.txt.value +='4'">4</span>
+	<span class="num" onclick="document.cal.txt.value +='5'">5</span>
+
+	<span class="num" onclick="document.cal.txt.value +='6'">6</span>
+
+
+	<span class="num plus" onclick="document.cal.txt.value +='+'">+</span>
+	<span class="num" onclick="document.cal.txt.value +='1'">1</span>
+
+	<span class="num" onclick="document.cal.txt.value +='2'">2</span>
+
+	<span class="num" onclick="document.cal.txt.value +='3'">3</span>
+
+
+	<span class="num" onclick="document.cal.txt.value +='0'">0</span>
+
+	<span class="num" onclick="document.cal.txt.value +='.'">.</span>
+
+	<span class="num equal"onclick="result()">=</span>
+
+	</form>
+</div>
+<div>
+	
+</div>
+</center>
+
+</body>
+</html>
